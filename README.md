@@ -40,6 +40,17 @@ $ yarn start:dev
 $ http://localhost:3000/api/v2/seed
 ```
 
+# Build for production
+1. Create the ```.env.prod``` file
+2. Set environment variables of production
+3. Build the image with 
+```
+$ docker-compose -f docker-compose.prod.yaml --env-file .env.prod --build
+```
+4. Run image
+```
+$ docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
 
 ##NOTAS
 Para utilizar los .env instalar yarn add @nestjs/config
